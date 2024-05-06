@@ -1,16 +1,8 @@
-/**
- * Retrieves ids from a list of students.
- * @param {{
- *   id: Number,
- *   firstName: String,
- *   location: String
- * }[]} students - The list of students.
- * @author Tumelo Webb <https://github.com/webbtumelo>
- * @returns
- */
-export default function getListStudentIds(students) {
-  if (students instanceof Array) {
-    return students.map((student) => student.id);
+export default function getListStudentIds(arr) {
+  let newArr = [];
+  if (arr instanceof Array) {
+    newArr = arr.map((item) => item.id);
   }
-  return [];
+
+  return newArr;
 }
